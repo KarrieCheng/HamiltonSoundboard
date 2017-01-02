@@ -1,25 +1,124 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
-	<dependencies>
-		<plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204" />
-	</dependencies>
-	<scenes>
-		<!--View Controller-->
-		<scene sceneID="tne-QT-ifu">
-			<objects>
-				<viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
-					<layoutGuides>
-						<viewControllerLayoutGuide type="top" id="y3c-jy-aDJ" />
-						<viewControllerLayoutGuide type="bottom" id="wfy-db-euE" />
-					</layoutGuides>
-					<view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-						<rect key="frame" x="0.0" y="0.0" width="600" height="600" />
-						<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" />
-						<color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite" />
-					</view>
-				</viewController>
-				<placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder" />
-			</objects>
-		</scene>
-	</scenes>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="62">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="61">
+            <objects>
+                <viewController id="62" sceneMemberID="viewController" customClass="ClipDetailViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="59"/>
+                        <viewControllerLayoutGuide type="bottom" id="60"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="63">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="66" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="533" width="600" height="30"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="PlayButton_TouchUpInside:" destination="62" id="103" eventType="touchUpInside"/>
+                                </connections>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="-112" y="600" width="600" height="30"/>
+                                    <mask key="constraints">
+                                        <include reference="158"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="158" firstAttribute="width" constant="600"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="158"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="67" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="20" y="533" width="118" height="30"/>
+                                <state key="normal" title="Replay">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ReplayButton_TouchUpInside:" destination="62" id="100" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="68" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="508" y="533" width="72" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SongLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="74" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="20" y="167" width="442" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="78" firstAttribute="width" constant="442"/>
+                                </constraints>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="75" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="20" y="204" width="560" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="20" y="204" width="335" height="128"/>
+                                </variation>
+                                <constraints>
+                                    <constraint id="137" firstAttribute="height" constant="128"/>
+                                </constraints>
+                            </textView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="69" firstItem="63" firstAttribute="bottom" secondItem="67" secondAttribute="bottom" constant="37"/>
+                            <constraint id="70" firstItem="67" firstAttribute="leading" secondItem="63" secondAttribute="leading" constant="20"/>
+                            <constraint id="71" firstItem="63" firstAttribute="bottom" secondItem="68" secondAttribute="bottom" constant="37"/>
+                            <constraint id="72" firstItem="63" firstAttribute="trailing" secondItem="68" secondAttribute="trailing" constant="20"/>
+                            <constraint id="76" firstItem="74" firstAttribute="leading" secondItem="63" secondAttribute="leading" constant="58"/>
+                            <constraint id="77" firstItem="74" firstAttribute="top" secondItem="63" secondAttribute="top" constant="155"/>
+                            <constraint id="145" firstItem="75" firstAttribute="top" secondItem="63" secondAttribute="top" constant="204"/>
+                            <constraint id="146" firstItem="63" firstAttribute="trailing" secondItem="75" secondAttribute="trailing" constant="20"/>
+                            <constraint id="147" firstItem="75" firstAttribute="leading" secondItem="63" secondAttribute="leading" constant="20"/>
+                            <constraint id="156" firstItem="63" firstAttribute="bottom" secondItem="66" secondAttribute="bottom" constant="37"/>
+                            <constraint id="157" firstItem="63" firstAttribute="trailing" secondItem="66" secondAttribute="trailing" constant="-113"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="156"/>
+                                <exclude reference="157"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="156"/>
+                                <include reference="157"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="LyricsText" destination="75" id="name-outlet-75"/>
+                        <outlet property="SongLabel" destination="74" id="name-outlet-74"/>
+                        <outlet property="ReplayButton" destination="67" id="name-outlet-67"/>
+                        <outlet property="PlayButton" destination="66" id="name-outlet-66"/>
+                        <outlet property="CancelButton" destination="68" id="name-outlet-68"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="64" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="343" y="22"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Images/Alexander_Hamilton_by_John_Trumbull,_1806.png" width="1221" height="1536"/>
+        <image name="Images/hamilton_bg.png" width="724" height="1194"/>
+    </resources>
 </document>

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Hamilton.PCL
+namespace HamiltonSoundboard.Core
 {
 	public class ClipsDataService
 	{
@@ -13,5 +13,9 @@ namespace Hamilton.PCL
 		{
 			return clipsRepository.GetAllClips();
 		}
+        public Clip GetClipById(int clipId)
+        {
+            return clipsRepository.GetClipById(clipId);
+        }
 	}
 }

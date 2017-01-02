@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Hamilton.PCL
+namespace HamiltonSoundboard.Core
 {
 	public class Clip
 	{
@@ -13,4 +13,4 @@ namespace Hamilton.PCL
 		public String Character { get; set; }
 		public DateTime LastUsed { get; set; }
 	}
-}
+} 

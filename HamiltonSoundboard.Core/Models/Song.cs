@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Hamilton.PCL
+namespace HamiltonSoundboard.Core
 {
 	public class Song
 	{

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Hamilton.PCL
+namespace HamiltonSoundboard.Core
 {
 	public class ClipRepository
 	{
@@ -19,7 +19,7 @@ namespace Hamilton.PCL
 			return clips.ToList<Clip>();
 		}
 
-		public Clip getClipById(int clipId)
+		public Clip GetClipById(int clipId)
 		{
 			IEnumerable<Clip> clips =
 				from clip in Clips
