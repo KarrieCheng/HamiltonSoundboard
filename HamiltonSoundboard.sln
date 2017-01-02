@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HamiltonSoundboard.Core", "HamiltonSoundboard.Core\HamiltonSoundboard.Core.csproj", "{BCBEB51D-0A5E-4B5C-8B5B-030F38D0ADE6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCBEB51D-0A5E-4B5C-8B5B-030F38D0ADE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCBEB51D-0A5E-4B5C-8B5B-030F38D0ADE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCBEB51D-0A5E-4B5C-8B5B-030F38D0ADE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCBEB51D-0A5E-4B5C-8B5B-030F38D0ADE6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
