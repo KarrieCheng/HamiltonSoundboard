@@ -99,6 +99,7 @@
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="Images\" />
+    <Folder Include="DataSources\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -114,6 +115,11 @@
     <Compile Include="ClipDetailViewController.cs" />
     <Compile Include="ClipDetailViewController.designer.cs">
       <DependentUpon>ClipDetailViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\ClipDataSource.cs" />
+    <Compile Include="ClipTableViewController.cs" />
+    <Compile Include="ClipTableViewController.designer.cs">
+      <DependentUpon>ClipTableViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
