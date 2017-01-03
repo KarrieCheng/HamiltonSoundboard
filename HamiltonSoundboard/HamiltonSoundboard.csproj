@@ -100,6 +100,7 @@
     <Folder Include="Resources\" />
     <Folder Include="Images\" />
     <Folder Include="DataSources\" />
+    <Folder Include="Sounds\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
