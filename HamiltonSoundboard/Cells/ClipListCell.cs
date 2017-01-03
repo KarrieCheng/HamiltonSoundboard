@@ -45,7 +45,6 @@ namespace HamiltonSoundboard
             clipLabel.Text = clipName;
             songLabel.Text = songName;
             timeLabel.Text = timeLength;
-
         }
     }
 }

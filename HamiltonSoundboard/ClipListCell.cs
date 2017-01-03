@@ -6,6 +6,6 @@ namespace HamiltonSoundboard
 {
     public partial class ClipListCell : UITableViewCell
     {
-        
+       
     }
 }

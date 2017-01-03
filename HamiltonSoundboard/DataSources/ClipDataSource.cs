@@ -16,12 +16,17 @@ namespace HamiltonSoundboard
             this.clips = clips;
         }
 
+		public Clip GetItem(int row)
+		{
+			return clips[row];
+		}
+
         public override nint RowsInSection(UITableView tableview, nint section)
         {
             return clips.Count;
         }
 
-        public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
+		public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
             ClipListCell cell = tableView.DequeueReusableCell(cellIdentifier) as ClipListCell;
 
@@ -38,5 +43,6 @@ namespace HamiltonSoundboard
 
             return cell;
         }
-    }
+
+}
 }
