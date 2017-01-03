@@ -100,6 +100,7 @@
     <Folder Include="Resources\" />
     <Folder Include="Images\" />
     <Folder Include="DataSources\" />
+    <Folder Include="Cells\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -120,6 +121,11 @@
     <Compile Include="ClipTableViewController.cs" />
     <Compile Include="ClipTableViewController.designer.cs">
       <DependentUpon>ClipTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\ClipListCell.cs" />
+    <Compile Include="ClipListCell.cs" />
+    <Compile Include="ClipListCell.designer.cs">
+      <DependentUpon>ClipListCell.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

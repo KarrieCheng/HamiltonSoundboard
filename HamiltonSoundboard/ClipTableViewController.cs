@@ -5,10 +5,10 @@ using HamiltonSoundboard.Core;
 
 namespace HamiltonSoundboard
 {
-    public partial class ClipTableViewController: UITableViewController
+    public partial class ClipTableViewController : UITableViewController
     {
         ClipsDataService dataService = new ClipsDataService();
-        public ClipTableViewController (IntPtr handle) : base (handle)
+        public ClipTableViewController(IntPtr handle) : base(handle)
         {
         }
 

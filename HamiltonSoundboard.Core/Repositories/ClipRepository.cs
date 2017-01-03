@@ -46,7 +46,7 @@ namespace HamiltonSoundboard.Core
 				Quote = "It was my parent's dying wish before they passed",
 				Song = "Aaron Burr, Sir",
 				Filename = "ab2.mp3",
-				Character = "Alexander Hamilton",
+				Character = "Aaron Burr",
 				LastUsed = DateTime.Now
 			}
 		};

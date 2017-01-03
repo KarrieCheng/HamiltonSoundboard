@@ -23,13 +23,18 @@ namespace HamiltonSoundboard
 
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
-            UITableViewCell cell = tableView.DequeueReusableCell(cellIdentifier) as UITableViewCell;
+            ClipListCell cell = tableView.DequeueReusableCell(cellIdentifier) as ClipListCell;
 
             if (cell == null)
-                cell = new UITableViewCell(UITableViewCellStyle.Default, cellIdentifier);
+                cell = new ClipListCell(cellIdentifier);
 
+            cell.UpdateCell(clips[indexPath.Row].Quote,
+                            clips[indexPath.Row].Song,
+                            "00:10",
+                            UIImage.FromFile("Images/hamilton_bg.png"));
+            //TODO: 3rd argument should eventually be time :\
             var clip = clips[indexPath.Row];
-            cell.TextLabel.Text = clip.Quote;
+            //cell.TextLabel.Text = clip.Quote;
 
             return cell;
         }

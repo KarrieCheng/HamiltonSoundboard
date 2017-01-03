@@ -11,8 +11,8 @@ using UIKit;
 
 namespace HamiltonSoundboard
 {
-    [Register ("ClipTableViewController")]
-    partial class ClipTableViewController
+    [Register ("ClipListCell")]
+    partial class ClipListCell
     {
         void ReleaseDesignerOutlets ()
         {
