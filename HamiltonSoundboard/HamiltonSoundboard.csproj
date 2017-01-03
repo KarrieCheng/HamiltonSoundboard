@@ -101,6 +101,7 @@
     <Folder Include="Images\" />
     <Folder Include="DataSources\" />
     <Folder Include="Cells\" />
+    <Folder Include="Sounds\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
