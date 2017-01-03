@@ -34,9 +34,9 @@ namespace HamiltonSoundboard.Core
 			new Clip()
 			{
 				ClipID = 1,
-				Quote = "How'd you graduate so fast",
+				Quote = "How'd you do, how'd you graduate so fast",
 				Song = "Aaron Burr, Sir",
-				Filename = "ab1.mp3",
+				Filename = "1-02 Aaron Burr, Sir 1 copy.m4a",
 				Character = "Alexander Hamilton",
 				LastUsed = DateTime.Now
 			},
@@ -45,10 +45,19 @@ namespace HamiltonSoundboard.Core
 				ClipID = 2,
 				Quote = "It was my parent's dying wish before they passed",
 				Song = "Aaron Burr, Sir",
-				Filename = "ab2.mp3",
+				Filename = "1-02 Aaron Burr, Sir 3.m4a",
 				Character = "Aaron Burr",
 				LastUsed = DateTime.Now
-			}
+			},
+            new Clip(){
+                ClipID = 3,
+                Quote = "I'm not stupid",
+                Song = "Aaron Burr, Sir",
+                Filename = "1-02 Aaron Burr, Sir 1.m4a",
+                Character = "Alexander Hamilton",
+                LastUsed = DateTime.Now
+            }
+
 		};
 	}
 }
