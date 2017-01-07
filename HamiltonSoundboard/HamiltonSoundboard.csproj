@@ -172,7 +172,6 @@
     <None Include="Sounds\2-22 The World Was Wide Enough 5.m4a" />
     <None Include="Sounds\ohphilipwhenyousmile.mp3" />
     <None Include="Sounds\philiptakeitaway copy.mp3" />
-    <None Include="Sounds\godbless.wav" />
     <None Include="Classes\godbless.wav" />
     <None Include="Classes\ohphilipwhenyousmile.mp3" />
     <None Include="Resources\1-02AaronBurrSir1copy.mp3" />
@@ -194,6 +193,7 @@
     <Compile Include="ClipListCell.designer.cs">
       <DependentUpon>ClipListCell.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\AudioManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HamiltonSoundboard.Core\HamiltonSoundboard.Core.csproj">
@@ -204,6 +204,7 @@
   <ItemGroup>
     <BundleResource Include="Images\Alexander_Hamilton_by_John_Trumbull,_1806.png" />
     <BundleResource Include="Images\hamilton_bg.png" />
+    <BundleResource Include="Sounds\godbless.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

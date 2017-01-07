@@ -3,6 +3,7 @@ using UIKit;
 using System.Collections.Generic;
 using HamiltonSoundboard.Core;
 using Foundation;
+using AVAudioPlayerSounds;
 
 namespace HamiltonSoundboard
 {
@@ -51,7 +52,7 @@ namespace HamiltonSoundboard
 
         public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
         {
-            //App.AudioManager.PlaySound("godbless.wav");
+            App.AudioManager.PlaySound("godbless.wav");
 
             tableView.DeselectRow(indexPath, true);
         }
