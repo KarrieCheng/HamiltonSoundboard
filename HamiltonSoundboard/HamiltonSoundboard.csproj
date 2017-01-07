@@ -102,6 +102,7 @@
     <Folder Include="DataSources\" />
     <Folder Include="Cells\" />
     <Folder Include="Sounds\" />
+    <Folder Include="Classes\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -112,7 +113,7 @@
     <None Include="Entitlements.plist" />
     <None Include="Sounds\1-02 Aaron Burr, Sir 1 copy 2.m4a" />
     <None Include="Sounds\1-02 Aaron Burr, Sir 1 copy.m4a" />
-    <None Include="Sounds\1-02 Aaron Burr, Sir 1.m4a" />
+    <None Include="Sounds\1-02AaronBurrSir1.m4a" />
     <None Include="Sounds\1-02 Aaron Burr, Sir 2.m4a" />
     <None Include="Sounds\1-02 Aaron Burr, Sir 3.m4a" />
     <None Include="Sounds\1-02 Aaron Burr, Sir 4.m4a" />
@@ -171,6 +172,10 @@
     <None Include="Sounds\2-22 The World Was Wide Enough 5.m4a" />
     <None Include="Sounds\ohphilipwhenyousmile.mp3" />
     <None Include="Sounds\philiptakeitaway copy.mp3" />
+    <None Include="Sounds\godbless.wav" />
+    <None Include="Classes\godbless.wav" />
+    <None Include="Classes\ohphilipwhenyousmile.mp3" />
+    <None Include="Resources\1-02AaronBurrSir1copy.mp3" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />

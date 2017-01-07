@@ -11,6 +11,7 @@ namespace HamiltonSoundboard
         UILabel songLabel;
         UILabel timeLabel;
         UIImageView clipStateImageView;
+
         public ClipListCell(NSString cellId) : base (UITableViewCellStyle.Default, cellId)
         {
             clipStateImageView = new UIImageView();

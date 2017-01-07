@@ -11,6 +11,7 @@ namespace HamiltonSoundboard
         private List<Clip> clips;
         NSString cellIdentifier = new NSString("ClipCell");
 
+
         public ClipDataSource(List<Clip> clips, UITableViewController callingController)
         {
             this.clips = clips;
@@ -43,6 +44,18 @@ namespace HamiltonSoundboard
 
             return cell;
         }
+        public static AppDelegate App
+        {
+            get { return (AppDelegate)UIApplication.SharedApplication.Delegate; }
+        }
+
+        public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
+        {
+            //App.AudioManager.PlaySound("godbless.wav");
+
+            tableView.DeselectRow(indexPath, true);
+        }
+
 
 }
 }
