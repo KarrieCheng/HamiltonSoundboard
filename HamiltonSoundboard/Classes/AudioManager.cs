@@ -42,14 +42,13 @@ namespace AudioToolbox
         public void PlaySound(string filename)
         {
             NSUrl songURL;
-
-            var fileUrl = new NSUrl(NSBundle.MainBundle.PathForResource("Sounds/godbless", "wav"), false);
+            string pathUrl = "Sounds/" + filename;
+            var fileUrl = new NSUrl(NSBundle.MainBundle.PathForResource(pathUrl.ToString(), "m4a"), false);
 
             songURL = fileUrl;
             NSError err;
 
-
-            soundEffect = new AVAudioPlayer(songURL, "wav", out err);
+            soundEffect = new AVAudioPlayer(songURL, "mp3", out err);
 
             soundEffect.FinishedPlaying += delegate
             {
@@ -57,7 +56,6 @@ namespace AudioToolbox
             };
             soundEffect.NumberOfLoops = 0;
             soundEffect.Play();
-
         }
         #endregion
     }

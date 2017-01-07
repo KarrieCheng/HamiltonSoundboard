@@ -52,7 +52,7 @@ namespace HamiltonSoundboard
 
         public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
         {
-            App.AudioManager.PlaySound("godbless.wav");
+            App.AudioManager.PlaySound(clips[indexPath.Row].Filename);
 
             tableView.DeselectRow(indexPath, true);
         }
