@@ -119,27 +119,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="186" customClass="ClipCell">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="186" id="187" customClass="ClipListCell">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue id="2858" destination="62" kind="show" identifier="ClipDetailSegue"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
+                        <prototypes/>
                         <connections>
                             <outlet property="dataSource" destination="182" id="184"/>
                             <outlet property="delegate" destination="182" id="185"/>
                         </connections>
+                        <searchBar contentMode="redraw" id="2894" key="tableHeaderView">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </searchBar>
                     </tableView>
-                    <connections/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="2882" id="2881"/>
+                        <outlet property="ClipSearchBar" destination="2894" id="name-outlet-2894"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="188" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="2882">
+                    <connections>
+                        <outlet property="delegate" destination="182" id="2883"/>
+                        <outlet property="searchBar" destination="2879" id="2884"/>
+                        <outlet property="searchContentsController" destination="182" id="2885"/>
+                        <outlet property="searchResultsDataSource" destination="182" id="2886"/>
+                        <outlet property="searchResultsDelegate" destination="182" id="2887"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="-492" y="11"/>
         </scene>
