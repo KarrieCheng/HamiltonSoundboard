@@ -41,7 +41,6 @@ namespace HamiltonSoundboard
             cell.TextLabel.Text = clip.Quote;
             cell.DetailTextLabel.Text = clip.Song;
 
-
             return cell;
         }
         public static AppDelegate App
