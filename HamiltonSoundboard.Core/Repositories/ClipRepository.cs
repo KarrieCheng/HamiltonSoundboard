@@ -34,7 +34,7 @@ namespace HamiltonSoundboard.Core
 			new Clip()
 			{
 				ClipID = 1,
-				Quote = "How'd you do, how'd you graduate so fast",
+				Quote = "I am not throwing away my shot \n I am not throwing away my shot",
 				Song = "Aaron Burr, Sir",
 				Filename = "1-03_1",
 				Character ="Alexander Hamilton",
@@ -43,7 +43,7 @@ namespace HamiltonSoundboard.Core
 			new Clip()
 			{
 				ClipID = 2,
-				Quote = "It was my parent's dying wish before they passed",
+				Quote = "Yo, I’m just like my country \n I’m young, scrappy and hungry \n And I’m not throwing away my shot",
 				Song = "Aaron Burr, Sir",
 				Filename = "1-03_2",
 				Character = "Aaron Burr",
@@ -51,7 +51,7 @@ namespace HamiltonSoundboard.Core
 			},
             new Clip(){
                 ClipID = 3,
-                Quote = "I'm not stupid",
+                Quote = "You’ve got to be carefully taught \n If you talk, you’re gonna get shot",
                 Song = "Aaron Burr, Sir",
                 Filename = "1-03_3",
                 Character = "Alexander Hamilton",
@@ -59,7 +59,7 @@ namespace HamiltonSoundboard.Core
             },
             new Clip(){
                 ClipID = 4,
-                Quote = "CLICK MEEEEE",
+                Quote = "We’ll bleed and fight for you, we’ll make it right for you",
                 Song = "Dear Theodosia",
                 Filename = "1-22_2",
                 Character = "Alexander Hamilton",
