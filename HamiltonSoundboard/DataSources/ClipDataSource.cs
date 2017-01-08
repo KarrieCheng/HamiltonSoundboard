@@ -11,6 +11,7 @@ namespace HamiltonSoundboard
     {
         private List<Clip> clips;
         NSString cellIdentifier = new NSString("ClipCell");
+        String time = "00:00";
 
 
         public ClipDataSource(List<Clip> clips, UITableViewController callingController)
@@ -37,7 +38,7 @@ namespace HamiltonSoundboard
 
             cell.UpdateCell(clips[indexPath.Row].Quote,
                             clips[indexPath.Row].Song,
-                            "00:10",
+                            time,
                             UIImage.FromFile("Images/hamilton_bg.png"));
             //TODO: 3rd argument should eventually be time :\
             var clip = clips[indexPath.Row];
