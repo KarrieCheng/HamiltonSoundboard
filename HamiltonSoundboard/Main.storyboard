@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="182">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="182">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Clip Detail View Controller-->
@@ -22,7 +23,7 @@
                                     <constraint firstAttribute="width" constant="600" id="158"/>
                                 </constraints>
                                 <state key="normal" title="Play">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -41,7 +42,7 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67">
                                 <rect key="frame" x="20" y="533" width="118" height="30"/>
                                 <state key="normal" title="Replay">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="ReplayButton_TouchUpInside:" destination="62" eventType="touchUpInside" id="100"/>
@@ -50,7 +51,7 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68">
                                 <rect key="frame" x="508" y="533" width="72" height="30"/>
                                 <state key="normal" title="Cancel">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SongLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74">
@@ -63,7 +64,7 @@
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="75">
                                 <rect key="frame" x="20" y="204" width="560" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="137"/>
                                 </constraints>
@@ -72,7 +73,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="67" secondAttribute="bottom" constant="37" id="69"/>
                             <constraint firstItem="67" firstAttribute="leading" secondItem="63" secondAttribute="leading" constant="20" id="70"/>
@@ -111,38 +112,26 @@
             </objects>
             <point key="canvasLocation" x="343" y="22"/>
         </scene>
-        <!--Clip Table View Controller.cs-->
+        <!--Clip Table View Controller-->
         <scene sceneID="181">
             <objects>
-                <tableViewController id="182" sceneMemberID="viewController" customClass="ClipTableViewController">
+                <tableViewController id="182" customClass="ClipTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="183">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="186" customClass="ClipCell">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="186" id="187" customClass="ClipListCell">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue id="2858" destination="62" kind="show" identifier="ClipDetailSegue"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes/>
                         <connections>
                             <outlet property="dataSource" destination="182" id="184"/>
                             <outlet property="delegate" destination="182" id="185"/>
                         </connections>
                     </tableView>
-                    <connections/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="188" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-492" y="11"/>
         </scene>
+        <!--Navigation Controller-->
         <scene sceneID="428">
             <objects>
                 <navigationController id="429" sceneMemberID="viewController">
@@ -151,13 +140,14 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue id="2430" destination="2404" kind="relationship" relationship="rootViewController"/>
+                        <segue destination="2404" kind="relationship" relationship="rootViewController" id="2430"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="432" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2443" y="-643"/>
         </scene>
+        <!--Hamilton!!!-->
         <scene sceneID="2403">
             <objects>
                 <viewController id="2404" sceneMemberID="viewController">
@@ -168,27 +158,27 @@
                     <view key="view" contentMode="scaleToFill" id="2405">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <subviews>
-                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2408" translatesAutoresizingMaskIntoConstraints="NO">
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2408">
                                 <rect key="frame" x="20" y="96" width="209" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="209" id="2872"/>
+                                </constraints>
                                 <state key="normal" title="Play Hamilton Quotes!">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue id="2474" destination="182" kind="show"/>
+                                    <segue destination="182" kind="show" id="2474"/>
                                 </connections>
-                                <constraints>
-                                    <constraint id="2872" firstAttribute="width" constant="209"/>
-                                </constraints>
                             </button>
                         </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint id="2870" firstItem="2408" firstAttribute="leading" secondItem="2405" secondAttribute="leading" constant="20"/>
-                            <constraint id="2871" firstItem="2408" firstAttribute="top" secondItem="2405" secondAttribute="top" constant="96"/>
+                            <constraint firstItem="2408" firstAttribute="leading" secondItem="2405" secondAttribute="leading" constant="20" id="2870"/>
+                            <constraint firstItem="2408" firstAttribute="top" secondItem="2405" secondAttribute="top" constant="96" id="2871"/>
                         </constraints>
                     </view>
-                    <navigationItem title="Hamilton!!!" id="2429" key="navigationItem"/>
+                    <navigationItem key="navigationItem" title="Hamilton!!!" id="2429"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2406" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
