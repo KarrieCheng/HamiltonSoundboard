@@ -10,6 +10,7 @@ namespace HamiltonSoundboard
     public partial class ClipTableViewController : UITableViewController
     {
         ClipsDataService dataService = new ClipsDataService();
+        UISearchController searchController;
 
         public ClipTableViewController(IntPtr handle) : base(handle)
         {
@@ -18,45 +19,40 @@ namespace HamiltonSoundboard
         public override void ViewDidLoad()
         {
             var clips = new List<Clip>();
-            string searchText = ClipSearchBar.Text;
-            if (String.IsNullOrEmpty(searchText))
+
+            //Creates an instance of a custom View Controller that holds the results
+            var searchResultsController = new SearchResultsViewController(this);
+
+            //Creates a search controller updater
+            var searchUpdater = new SearchResultsUpdator();
+            searchUpdater.UpdateSearchResults += searchResultsController.Search;
+
+            //add the search controller
+            searchController = new UISearchController(searchResultsController)
             {
-                clips = dataService.GetAllClips();
-            }
-            else {
-                clips = PerformSearch(searchText);
-            }
-            //TODO: Find where to add search
+                SearchResultsUpdater = searchUpdater
+            };
+            
+            //format the search bar
+            searchController.SearchBar.SizeToFit();
+            searchController.SearchBar.SearchBarStyle = UISearchBarStyle.Minimal;
+            searchController.SearchBar.Placeholder = "Enter a search query";
+
+            //the search bar is contained in the navigation bar, so it should be visible
+            searchController.HidesNavigationBarDuringPresentation = false;
+
+            //Ensure the searchResultsController is presented in the current View Controller 
+            DefinesPresentationContext = true;
+
+            //Set the search bar in the navigation bar
+            NavigationItem.TitleView = searchController.SearchBar;
+
+            clips = dataService.GetAllClips();
 
             var dataSource = new ClipDataSource(clips, this);
             this.NavigationItem.Title = "Hamilton Menu";
+            TableView.TableHeaderView = searchController.SearchBar;
             TableView.Source = dataSource;
         }
-
-        List<Clip> PerformSearch(string searchString)
-        {
-            searchString = searchString.Trim();
-            string[] searchItems = string.IsNullOrEmpty(searchString)
-                ? new string[0]
-                : searchString.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-
-            var filteredProducts = new List<Clip>();
-
-            foreach (var item in searchItems)
-            {
-                var clips = dataService.GetAllClips();
-
-                IEnumerable<Clip> query =
-                    from p in clips
-                        where p.Quote.IndexOf(item, StringComparison.OrdinalIgnoreCase) >= 0
-                    orderby p.Quote
-                    select p;
-
-                filteredProducts.AddRange(query);
-            }
-
-            return filteredProducts.Distinct().ToList();
-        }
-
     }
 }

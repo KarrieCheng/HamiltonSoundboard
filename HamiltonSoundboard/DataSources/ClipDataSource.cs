@@ -13,23 +13,23 @@ namespace HamiltonSoundboard
         NSString cellIdentifier = new NSString("ClipCell");
         String time = "00:00";
 
-
         public ClipDataSource(List<Clip> clips, UITableViewController callingController)
         {
             this.clips = clips;
         }
 
-		public Clip GetItem(int row)
-		{
-			return clips[row];
-		}
+        public Clip GetItem(int row)
+        {
+            return clips[row];
+        }
+
 
         public override nint RowsInSection(UITableView tableview, nint section)
         {
             return clips.Count;
         }
 
-		public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
+        public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
             UITableViewCell cell = tableView.DequeueReusableCell(cellIdentifier) as UITableViewCell;
 
@@ -43,10 +43,6 @@ namespace HamiltonSoundboard
 
             return cell;
         }
-        public static AppDelegate App
-        {
-            get { return (AppDelegate)UIApplication.SharedApplication.Delegate; }
-        }
 
         public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
         {
@@ -56,5 +52,9 @@ namespace HamiltonSoundboard
         }
 
 
-}
+        public static AppDelegate App
+        {
+            get { return (AppDelegate)UIApplication.SharedApplication.Delegate; }
+        }
+    }
 }
